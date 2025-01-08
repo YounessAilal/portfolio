@@ -1,0 +1,149 @@
+@import "./_utilities.sass";
+
+.project {
+  min-height: 45rem;
+  $gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  padding: $gap;
+  background-color: $color-bg-3;
+  border-radius: $radius-lg;
+  border: $border-2;
+  &:hover img:not(.project__icon) {
+    scale: 1.1;
+  }
+
+  &__left {
+    border-radius: $radius-md;
+    width: 100%;
+    height: 34rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      object-fit: cover;
+      transition: 0.2s ease;
+    }
+  }
+  &__right {
+    display: grid;
+    gap: $gap;
+    grid-template-rows: 1fr auto auto;
+    flex: 1;
+  }
+  &__details {
+    @include wrapper;
+    flex-direction: column;
+    gap: $gap;
+    height: 100%;
+    flex: 1;
+  }
+  &__title {
+    font-size: 2rem;
+    color: $color-text;
+  }
+  &__desc {
+    color: $color-text-low;
+    font-size: 1.4rem;
+  }
+  &__tags {
+    @include wrapper;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 1rem;
+    text-align: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    i {
+      font-size: 3rem;
+      color: $color-white;
+    }
+    // img {
+    //   height: 3rem;
+    // }
+  }
+}
+
+[data-icon="arrow"] {
+  font-size: 1.5rem;
+}
+[data-icon="link"] {
+  font-size: 1.5rem;
+}
+[data-icon="github"] {
+  font-size: 5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  @media (max-width: 900px) {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  &__title {
+    margin: 2rem auto;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.heart {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: red;
+  transform: rotate(-45deg);
+  position: relative;
+  animation: heartbeat 1.5s infinite;
+  margin-left: 1.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  &::before {
+    top: -0.7rem;
+    left: 0px;
+  }
+
+  &::after {
+    left: 0.7rem;
+    top: 0px;
+  }
+}
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+}
