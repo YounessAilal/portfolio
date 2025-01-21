@@ -57,7 +57,7 @@ img {
   background-color: rgba(1, 31, 55, 0.6);
   padding: 3rem;
   margin-top: 15vh;
-  border-top: 2px solid rgba(22, 53, 78, 0.6);
+  border-top: 2px solid #16354e;
 }
 .footer__top {
   max-width: 120rem;
@@ -84,9 +84,14 @@ img {
 .footer__link:hover {
   color: #64ffda;
 }
+.footer .with {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
 .footer__credits {
   font-size: 1.5rem;
-  max-width: 60ch;
+  max-width: 65ch;
 }
 .footer__credits a {
   color: #64ffda;
@@ -111,7 +116,7 @@ img {
   gap: 6rem;
   justify-content: space-between;
   position: relative;
-  margin-top: 2rem;
+  min-height: 100vh;
 }
 @media (max-width: 1200px) {
   .hero {
@@ -131,6 +136,12 @@ img {
   flex-direction: column;
   gap: 3rem;
   align-self: center;
+}
+.hero__right-vid {
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero__right {
   display: flex;
@@ -243,12 +254,11 @@ svg {
 .skills__container {
   display: flex;
   background-color: rgba(2, 34, 60, 0.6);
-  border: 2px solid rgba(22, 53, 78, 0.6);
+  border: 2px solid #16354e;
   border-radius: 6px;
   padding: 1.5rem 2rem;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  grid-template-rows: 6rem auto auto;
+  grid-template-columns: 550px 1fr;
   justify-content: space-between;
   gap: 5rem;
   row-gap: 1rem;
@@ -258,7 +268,6 @@ svg {
 @media (max-width: 1104px) {
   .skills__container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
     row-gap: 4rem;
   }
 }
@@ -274,17 +283,14 @@ svg {
 }
 .skills__top {
   font-size: 1.4rem;
-  grid-column: 1/1;
 }
 .skills__mid {
-  grid-column: 1/1;
   font-size: 3.6rem;
   line-height: 1.2;
   color: #e5eafb;
   font-weight: 600;
 }
 .skills__bottom {
-  grid-column: 1/1;
   margin-top: 4rem;
   font-size: 1.4rem;
   max-width: 40ch;
@@ -303,8 +309,7 @@ svg {
   color: #64ffda;
 }
 .skills__right {
-  grid-column: 2/3;
-  grid-row: 1/-1;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 2rem;
@@ -328,17 +333,19 @@ svg {
 .skills__card {
   font-size: 1.6rem;
   display: flex;
+  height: 14rem;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   color: #ccd7f7;
   background-color: rgba(11, 25, 46, 0.6);
-  border: 2px solid rgba(22, 53, 78, 0.6);
+  border: 2px solid #16354e;
   border-radius: 6px;
 }
 .skills__icon {
-  font-size: 4rem;
+  height: 4rem;
 }
 .skills__circle-1 {
   position: absolute;
@@ -357,15 +364,17 @@ svg {
 
 .project {
   min-height: 45rem;
+  filter: brightness(100%);
+  transition: 0.2s;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
   background-color: rgba(1, 31, 55, 0.6);
   border-radius: 10px;
-  border: 2px solid rgba(22, 53, 78, 0.6);
+  border: 2px solid #16354e;
 }
-.project:hover img:not(.project__icon) {
+.project:hover img {
   scale: 1.1;
 }
 .project__left {
@@ -394,7 +403,7 @@ svg {
 .project__details {
   display: flex;
   background-color: rgba(2, 34, 60, 0.6);
-  border: 2px solid rgba(22, 53, 78, 0.6);
+  border: 2px solid #16354e;
   border-radius: 6px;
   padding: 1.5rem 2rem;
   flex-direction: column;
@@ -413,7 +422,7 @@ svg {
 .project__tags {
   display: flex;
   background-color: rgba(2, 34, 60, 0.6);
-  border: 2px solid rgba(22, 53, 78, 0.6);
+  border: 2px solid #16354e;
   border-radius: 6px;
   padding: 1.5rem 2rem;
   flex-wrap: wrap;
@@ -458,8 +467,11 @@ svg {
     grid-template-columns: 1fr;
   }
 }
+.projects:has(.project:hover) .project:not(:hover) {
+  filter: brightness(65%);
+}
 .projects__title {
-  margin: 2rem auto;
+  margin: 5rem auto;
   font-size: 2rem;
   text-align: center;
   width: 100%;
@@ -469,6 +481,21 @@ svg {
   justify-content: center;
   gap: 1rem;
   text-transform: uppercase;
+}
+
+.heart.small {
+  height: 1rem;
+  width: 1rem;
+}
+.heart.small::before, .heart.small::after {
+  height: 1rem;
+  width: 1rem;
+}
+.heart.small::before {
+  top: -0.5rem;
+}
+.heart.small::after {
+  left: 0.5rem;
 }
 
 .heart {
@@ -570,11 +597,12 @@ svg {
 html {
   font-size: clamp(8px, 1vw, 10px);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto Mono", monospace, sans-serif;
-  background-color: rgb(11, 25, 46);
+  background-color: #0b192e;
   color: #ccd7f7;
   line-height: 1.6;
   font-weight: 400;

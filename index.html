@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+
     <link rel="stylesheet" href="./styles/index.css" />
 
     <link
@@ -28,15 +30,15 @@
       </a>
       <nav>
         <div class="nav">
-          <a class="projects-link link">
+          <a href="#projects" class="projects-link link">
             <span>01.</span>
             <p>Projects</p>
           </a>
-          <a class="skills-link link">
+          <a href="#skills" class="skills-link link">
             <span>02.</span>
             <p>Skills</p>
           </a>
-          <a class="contact-link link">
+          <a href="#contact" class="contact-link link">
             <span>03.</span>
             <p>Contact</p>
           </a>
@@ -60,19 +62,25 @@
             </p>
           </div>
 
-          <div class="hero__right">
+          <!-- <div class="hero__right">
             <div class="hero__code">
-              <img src="{code}" alt="typescript code block" />
+              <img src="./assets/code.png" alt="typescript code block" />
             </div>
             <div class="hero__code">
-              <img src="{code}" alt="typescript code block" />
+              <img src="./assets/code.png" alt="typescript code block" />
             </div>
             <div class="hero__code">
-              <img src="{code}" alt="typescript code block" />
+              <img src="./assets/code.png" alt="typescript code block" />
             </div>
             <div class="hero__code">
-              <img src="{code}" alt="typescript code block" />
+              <img src="./assets/code.png" alt="typescript code block" />
             </div>
+          </div> -->
+          <div class="hero__right-vid">
+            <!-- <canvas id="canvas" width="500" height="500"></canvas> -->
+            <video autoplay loop="true">
+              <source src="./assets/animation.webm" />
+            </video>
           </div>
 
           <div class="hero__circle-2">
@@ -88,7 +96,7 @@
         </div>
       </section>
 
-      <section id="projects_section" class="container">
+      <section id="projects" class="container">
         <div class="projects__title">
           Projects I Made With
           <p class="heart"></p>
@@ -223,7 +231,290 @@
           </figure>
         </div>
       </section>
+      <section class="container" id="skills">
+        <div class="skills">
+          <div class="skills__container">
+            <div class="skills__left">
+              <p class="skills__top">I constantly try to improve myself</p>
+              <p class="skills__mid">
+                In the meantime, these are the tools<br />
+                I use.
+              </p>
+              <p class="skills__bottom">
+                I am planning to learn
+                <a href="https://nextjs.org" target="_blank" class="link"
+                  >Next js</a
+                >
+                this year. Other than that, I also constantly practice web
+                design and
+                <a target="_blanks" href="https://www.figma.com/" class="link"
+                  >Figma</a
+                >.
+              </p>
+            </div>
+            <div class="skills__right">
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32">
+                  <path
+                    fill="#e44f26"
+                    d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z" />
+                  <path
+                    fill="#f1662a"
+                    d="m16 27.858l8.17-2.265l1.922-21.532H16z" />
+                  <path
+                    fill="#ebebeb"
+                    d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z" />
+                  <path
+                    fill="#fff"
+                    d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z" />
+                </svg>
+
+                <p>HTML 5</p>
+              </span>
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32">
+                  <path
+                    fill="#1572b6"
+                    d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z" />
+                  <path
+                    fill="#33a9dc"
+                    d="m16 27.858l8.17-2.265l1.922-21.532H16z" />
+                  <path
+                    fill="#fff"
+                    d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16z" />
+                  <path
+                    fill="#ebebeb"
+                    d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004z" />
+                  <path
+                    fill="#fff"
+                    d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007z" />
+                  <path
+                    fill="#ebebeb"
+                    d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829z" />
+                </svg>
+
+                <p>CSS</p>
+              </span>
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32">
+                  <path fill="#f5de19" d="M2 2h28v28H2z" />
+                  <path
+                    d="M20.809 23.875a2.87 2.87 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3c0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964c0-1.973 1.5-3.476 3.853-3.476a3.89 3.89 0 0 1 3.742 2.107L25 18.128A1.79 1.79 0 0 0 23.311 17a1.145 1.145 0 0 0-1.259 1.128c0 .789.489 1.109 1.618 1.6l.658.282c2.236.959 3.5 1.936 3.5 4.133c0 2.369-1.861 3.667-4.36 3.667a5.06 5.06 0 0 1-4.795-2.691Zm-9.295.228c.413.733.789 1.353 1.693 1.353c.864 0 1.41-.338 1.41-1.653v-8.947h2.631v8.982c0 2.724-1.6 3.964-3.929 3.964a4.085 4.085 0 0 1-3.947-2.4Z" />
+                </svg>
+                <p>Javascript</p>
+              </span>
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32">
+                  <path
+                    fill="#44a8b3"
+                    d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1m-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1" />
+                </svg>
+
+                <p>TailwindCSS</p>
+              </span>
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 48 48">
+                  <path
+                    fill="#7c4dff"
+                    d="M7.373,11.443C7.293,9.132,9.094,7,11.529,7h24.946c2.435,0,4.236,2.132,4.155,4.443	c-0.077,2.221,0.023,5.097,0.747,7.443c0.726,2.353,1.951,3.84,3.957,4.031v2.167c-2.006,0.191-3.23,1.678-3.957,4.031	c-0.724,2.345-0.824,5.222-0.747,7.443C40.71,38.868,38.909,41,36.475,41H11.529c-2.434,0-4.236-2.132-4.155-4.443	c0.077-2.221-0.023-5.097-0.747-7.443c-0.726-2.353-1.954-3.84-3.96-4.031v-2.167c2.006-0.191,3.233-1.678,3.96-4.031	C7.35,16.54,7.451,13.664,7.373,11.443z"></path>
+                  <path
+                    fill="#fff"
+                    d="M27.073,23.464v-0.028c1.853-0.32,3.299-2.057,3.299-3.97c0-1.352-0.52-2.498-1.504-3.312	c-0.981-0.812-2.357-1.241-3.981-1.241H17.45V33.08h7.475c1.942,0,3.555-0.474,4.663-1.372c1.109-0.899,1.696-2.207,1.696-3.783	C31.283,25.544,29.593,23.756,27.073,23.464z M23.59,22.608h-3.181V17.29h3.784c2.076,0,3.219,0.911,3.219,2.565	C27.413,21.63,26.055,22.608,23.59,22.608z M20.409,24.834h3.759c2.716,0,4.092,0.981,4.092,2.916c0,1.932-1.357,2.953-3.925,2.953	h-3.926V24.834z"></path>
+                </svg>
+
+                <p>Bootsrap</p>
+              </span>
+              <span class="skills__card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 48 48">
+                  <path
+                    fill="#e64a19"
+                    d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z"></path>
+                  <path
+                    fill="#7c4dff"
+                    d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z"></path>
+                  <path
+                    fill="#66bb6a"
+                    d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z"></path>
+                  <path
+                    fill="#ff7043"
+                    d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z"></path>
+                  <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
+                </svg>
+
+                <p>Figma</p>
+              </span>
+            </div>
+            <div class="skills__circle-1">
+              <div class="blur1">
+                <div class="circle1"></div>
+              </div>
+            </div>
+            <div class="skills__circle-2">
+              <div class="blur2">
+                <div class="circle2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="contact" class="footer">
+        <div class="footer__top">
+          <ul class="footer__links">
+            <li>
+              <a
+                class="link footer__link"
+                target="_blank"
+                href="mailto:itsyounessaylal@gmail.com">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037" />
+                </svg>
+                itsyounessaylal@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                class="link footer__link"
+                target="_blank"
+                href="tel:+212624360624">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z" />
+                </svg>
+                +212 624360624
+              </a>
+            </li>
+            <li>
+              <a
+                class="link footer__link"
+                target="_blank"
+                href="https://www.twitter.com/YounessAilal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path d="M1 2h2.5L3.5 2h-2.5zM5.5 2h2.5L7.2 2h-2.5z">
+                      <animate
+                        fill="freeze"
+                        attributeName="d"
+                        dur="0.4s"
+                        values="M1 2h2.5L3.5 2h-2.5zM5.5 2h2.5L7.2 2h-2.5z;M1 2h2.5L18.5 22h-2.5zM5.5 2h2.5L23 22h-2.5z" />
+                    </path>
+                    <path d="M3 2h5v0h-5zM16 22h5v0h-5z">
+                      <animate
+                        fill="freeze"
+                        attributeName="d"
+                        begin="0.4s"
+                        dur="0.4s"
+                        values="M3 2h5v0h-5zM16 22h5v0h-5z;M3 2h5v2h-5zM16 22h5v-2h-5z" />
+                    </path>
+                    <path d="M18.5 2h3.5L22 2h-3.5z">
+                      <animate
+                        fill="freeze"
+                        attributeName="d"
+                        begin="0.5s"
+                        dur="0.4s"
+                        values="M18.5 2h3.5L22 2h-3.5z;M18.5 2h3.5L5 22h-3.5z" />
+                    </path>
+                  </g>
+                </svg>
+                twitter.com/YounessAilal
+              </a>
+            </li>
+            <li>
+              <a
+                class="link footer__link"
+                target="_blank"
+                href="https://www.github.com/YounessAilal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+                </svg>
+                github.com/YounessAilal
+              </a>
+            </li>
+          </ul>
+          <div class="footer__credits">
+            <p>I personally designed this portfolio using</p>
+            <a href="https://www.figma.com/" class="link" target="_blank"
+              >Figma</a
+            >
+            and coded it in
+            <a
+              class="link"
+              target="_blank"
+              href="https://code.visualstudio.com/"
+              >VS Code</a
+            >
+            <div class="with">
+              with
+              <p class="heart small"></p>
+            </div>
+
+            and deployed through
+            <a href="https://www.netlify.com/" class="link" target="_blank"
+              >Netlify</a
+            >.
+          </div>
+        </div>
+        <div class="footer__copyrights">
+          &copy; 2025 by
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.github.com/YounessAilal"
+            >Youness Ailal</a
+          >
+          - all rights reserved
+        </div>
+      </footer>
     </main>
     <footer />
+    <script src="./script/animation.js"></script>
   </body>
 </html>
